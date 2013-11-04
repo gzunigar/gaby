@@ -13,14 +13,18 @@
 <template name="hello">
   <h1>Hello User!! </h1>
   {{greetings}}
- <a href="#" class="btn btn-primary btn-primary" value="Click"><span class="glyphicon glyphicon-phone"></span> chatear!</a>
+ 
 </template>
 
 <template name="messages">
 	  <div class="row">
       <div class="span6">
+      <h4>Do you have a message? Sign in with Twitter to add it.</h4>
+		 <br>
+		 <input type="text" name="mensajes" size=15 value="Escribe tu mensaje" ></>
 	  <div class="well">
-		 <h4>Do you have a message? Sign in with Twitter to add it.</h4>
+		 
+		 <br>
 		        {{loginButtons}}
 		      </div>
 		      <table class="table">
