@@ -1,0 +1,52 @@
+<head>
+<script type="text/javascript"
+    src="/scripts/handlebars-0.9.0.pre.4.js"/>	
+  <title>gaby APP</title>
+</head>
+
+<body>
+  {{> hello}}
+</br>  
+  {{> messages}}
+</body>
+
+<template name="hello">
+  <h1>Hello User!! </h1>
+  {{greetings}}
+ <a href="#" class="btn btn-primary btn-primary" value="Click"><span class="glyphicon glyphicon-phone"></span> chatear!</a>
+</template>
+
+<template name="messages">
+	  <div class="row">
+      <div class="span6">
+	  <div class="well">
+		 <h4>Do you have a message? Sign in with Twitter to add it.</h4>
+		        {{loginButtons}}
+		      </div>
+		      <table class="table">
+      {{#each users}}
+        {{> user}}
+      {{/each}}
+      </table>
+
+    <div class="span12 footer">
+      Built by <a href="http://twitter.com/gabyz22">Gabriela</a> with <a href="http://www.meteor.com" target="_blank">Meteor</a>.
+    </div>
+<!--
+  {{#each messages}}
+  <strong>{{name}}:</strong>{{message}}<br>
+  {{/each}}
+   -->
+ </template>
+<!--
+
+ <template name="user">
+ <tr>
+<td>
+  <a target="_blank" href="http://twitter.com/{{userName}}"><img src="{{image}}"/> {{fullName}}</a>
+
+ 
+   
+</td>
+</tr> 
+</template>-->
